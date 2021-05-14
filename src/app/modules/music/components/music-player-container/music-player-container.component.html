@@ -1,0 +1,14 @@
+<div class="container my-3 rounded">
+  <div class="d-flex justify-content-center">
+    <h1 class="text-secondary p-5">Mixing</h1>
+  </div>
+  <app-music-player
+    [currentSong]="song"
+    (commentEmitter)="changeComment($event)"
+  ></app-music-player>
+    <app-comment-section
+    (newCommentEmitter)="addComment($event)"
+  ></app-comment-section>
+  <app-comment-popup [currentComment]="currentComments"></app-comment-popup>
+  <app-comment-table [comments]="comments"></app-comment-table>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid p-5 position-relative">
+  <drag-scroll
+    [scroll-x-wheel-enabled]="true"
+    [scrollbar-hidden]="true"
+    #noteScroll
+  >
+    <div *ngFor="let note of notes" class="" drag-scroll-item>
+      <div
+        class="note"
+        (click)="openNoteDisplay(note)"
+        [ngStyle]="{ 'width.px': noteW, 'margin-right.px': noteP,'margin-left.px': noteP }"
+      >
+        <h1 class="card-title">{{ note.title }}</h1>
+        <h4 class="card-subtitle text-muted">{{ note.date | date }}</h4>
+        <p class="card-text">
+          {{ note.content | shortContent }}
+        </p>
+        <div class="font-weight-bolder link-dark p-2">Read More</div>
+      </div>
+    </div>
+  </drag-scroll>
+  <button id="control-left-notes" (click)="moveLeft()">
+    <i class="fas fa-chevron-left fa-4x"></i>
+  </button>
+  <button id="control-right-notes" (click)="moveRight()">
+    <i class="fas fa-chevron-right fa-4x"></i>
+  </button>
+</div>

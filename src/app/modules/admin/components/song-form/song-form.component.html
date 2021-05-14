@@ -1,0 +1,60 @@
+<form
+  #form="ngForm"
+  class="container"
+  (ngSubmit)="submit(audio.files, img.files)"
+>
+  <div class="row">
+    <input
+      type="text"
+      class="form-control bg-transparent col-12 mt-5"
+      placeholder="name"
+      [(ngModel)]="model.name"
+      #name="ngModel"
+      required
+      [maxlength]="30"
+      [ngClass]="{
+        'is-invalid': name.touched && name.invalid,
+        'is-valid': name.valid
+      }"
+      name="name"
+    />
+    <textarea
+      class="form-control bg-transparent col-12 mt-5"
+      placeholder="description"
+      [(ngModel)]="model.description"
+      #description="ngModel"
+      required
+      [maxlength]="80"
+      [ngClass]="{
+        'is-invalid': description.invalid && description.touched,
+        'is-valid': description.valid
+      }"
+      name="description"
+    ></textarea>
+    <label for="img" class="mt-5">image file</label>
+    <input
+      class="form-control bg-transparent col-12"
+      type="file"
+      accept="image/png, image/jpeg"
+      #img
+      id="img"
+    />
+    <label for="audio" class="mt-5">audio file</label>
+    <input
+      class="form-control bg-transparent col-12"
+      type="file"
+      accept=".mp3"
+      #audio
+      id="audio"
+    />
+  </div>
+  <div class="d-flex justify-content-center mt-5">
+    <button
+      type="submit"
+      class="btn-costume rounded mb-3"
+      [disabled]="!form.valid"
+    >
+      finish
+    </button>
+  </div>
+</form>

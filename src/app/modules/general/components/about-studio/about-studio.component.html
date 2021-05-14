@@ -1,0 +1,121 @@
+<div appIsMobile [section]="section">
+  <app-title [titleContent]="title" [titleColor]="titleColor"></app-title>
+  <div class="container d-flex justify-content-center">
+    <p class="text-white">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur dolore
+      in velit repudiandae hic eveniet, cupiditate saepe dicta. Sed tempore, qui
+      laborum laboriosam debitis tenetur iure quisquam blanditiis consequatur
+      voluptate! Veritatis qui quod aspernatur unde reiciendis ipsa assumenda
+      culpa beatae nesciunt cumque tempora rem facilis non, explicabo illum quae
+      perferendis voluptas, consectetur incidunt dolorum cupiditate blanditiis
+      quo doloribus expedita! Error? Vero sed dolore natus necessitatibus
+      officiis assumenda fugiat non et consequuntur id. Illo odit nam expedita
+      minima temporibus doloremque provident praesentium neque, reprehenderit
+      ipsum porro possimus unde dolorum dignissimos modi. Laboriosam voluptatum
+      tempora aut nesciunt hic eveniet animi incidunt voluptatem cupiditate
+      doloremque aspernatur iusto nulla aperiam corporis fugiat, explicabo amet
+      laudantium eos autem debitis accusamus repellat. Itaque adipisci nihil
+      suscipit. Eveniet aliquid, est velit dolorem suscipit cupiditate
+      reprehenderit incidunt. A, temporibus. Nemo iure expedita repudiandae
+      ullam, inventore pariatur odit, ex optio officia velit consequuntur autem,
+      doloribus temporibus at numquam voluptas. Quibusdam obcaecati odit, fugit
+      sit repellat
+    </p>
+  </div>
+  <div class="container">
+    <div class="row p-5">
+      <div class="d-none d-md-block col">
+        <img src="{{ headImg1 }}" class="w-100 header-img" />
+      </div>
+      <div class="d-none d-md-block col">
+        <img src="{{ headImg2 }}" class="w-100 header-img" />
+      </div>
+    </div>
+    <div class="row gy-3" id="gallery-container">
+      <div *ngFor="let img of gallery" class="col-12 col-md-2">
+        <img
+          src="{{ img.src }}"
+          class="w-100 gallery-img"
+          (click)="open(img)"
+        />
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <h1 class="text-secondary p-5">header of all lists</h1>
+    </div>
+    <div class="row text-light">
+      <div class="col-12 col-md-3">
+        <h6 class="text-secondary">list haeder</h6>
+        <ul>
+          <li>temporibus</li>
+          <li>obcaecati</li>
+          <li>fugit</li>
+          <li>repellat</li>
+          <li>cupiditate</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h6 class="text-secondary">list haeder</h6>
+        <ul>
+          <li>temporibus</li>
+          <li>obcaecati</li>
+          <li>fugit</li>
+          <li>repellat</li>
+          <li>cupiditate</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h6 class="text-secondary">list haeder</h6>
+        <ul>
+          <li>temporibus</li>
+          <li>obcaecati</li>
+          <li>fugit</li>
+          <li>repellat</li>
+          <li>cupiditate</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h6 class="text-secondary">list haeder</h6>
+        <ul>
+          <li>temporibus</li>
+          <li>obcaecati</li>
+          <li>fugit</li>
+          <li>repellat</li>
+          <li>cupiditate</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h6 class="text-secondary">list haeder</h6>
+        <ul>
+          <li>temporibus</li>
+          <li>obcaecati</li>
+          <li>fugit</li>
+          <li>repellat</li>
+          <li>cupiditate</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-3">
+        <h6 class="text-secondary">list haeder</h6>
+        <ul>
+          <li>temporibus</li>
+          <li>obcaecati</li>
+          <li>fugit</li>
+          <li>repellat</li>
+          <li>cupiditate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="gallery-modal" *ngIf="isShow">
+    <img src="{{ currentImg.src }}" id="img-modal" />
+    <button id="control-left-modal" (click)="moveLeft()">
+      <i class="fas fa-chevron-left fa-4x"></i>
+    </button>
+    <button id="control-right-modal" (click)="moveRight()">
+      <i class="fas fa-chevron-right fa-4x"></i>
+    </button>
+    <button id="control-close" (click)="close()">
+      <i class="far fa-times-circle fa-2x"></i>
+    </button>
+  </div>
+</div>

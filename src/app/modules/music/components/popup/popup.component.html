@@ -1,0 +1,11 @@
+<div
+  class="shadow-lg box sb1 p-4 rounded position-relative m-4 animate__animated {{commentStyle}}"
+  [ngClass]="{
+    'animate__fadeIn animate__faster': isAlive,
+    'animate__fadeOut animate__faster animate__delay-2s': !isAlive
+  }"
+>
+  <span class="fw-normal text-decoration-underline">{{ comment.author }}:</span>
+  <br />
+  {{ comment.content }}
+</div>

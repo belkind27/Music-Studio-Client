@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-12 col-md-4 col-lg-2 position-relative">
+    <img
+      *ngIf="currentSong"
+      class="img-fluid rounded"
+      src="{{ currentSong?.imgSource }}"
+    />
+    <button
+      class="mr-2 btn"
+      id="btn-play"
+      [disabled]="!isReady"
+      (click)="btnClick()"
+    >
+      <i
+        class="fa fa-3x"
+        [ngClass]="{
+          'fa-play': !isPlaying,
+          'fa-pause': isPlaying
+        }"
+      ></i>
+    </button>
+    <div class="d-flex d-sm-none flex-column">
+      <h4 class="card-title">{{ currentSong?.name }}</h4>
+      <h6 class="text-muted">{{ currentSong?.date | date }}</h6>
+      <p class="card-text text-muted">
+        {{ currentSong?.description }}
+      </p>
+    </div>
+  </div>
+  <div class="col d-none d-sm-flex flex-column">
+    <h4 class="card-title">{{ currentSong?.name }}</h4>
+    <h6 class="text-muted">{{ currentSong?.date | date }}</h6>
+    <p class="card-text text-muted">
+      {{ currentSong?.description }}
+    </p>
+    <app-player
+      [songPath]="currentSong?.audioSource"
+      [songName]="currentSong?.name"
+      [(isPlaying)]="isPlaying"
+      [isAudioBarShown]="isAudioBarShown"
+      (durationEmitter)="getDuration($event)"
+      (timePastEmitter)="getTimePast($event)"
+      (isEndedEmitter)="onAudioEnded($event)"
+    ></app-player>
+    <div class="d-none d-lg-flex justify-content-between">
+      <span id="timeLeft">{{ timePast | timeAdapter }}</span>
+      <span id="duration">{{ duration | timeAdapter }}</span>
+    </div>
+  </div>
+</div>
+<div class="d-block d-sm-none" id="divider">
+</div>

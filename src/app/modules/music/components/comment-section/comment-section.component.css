@@ -1,0 +1,29 @@
+#emoji-container {
+  position: relative;
+}
+.btn-emoji {
+  background-color: transparent;
+  color: var(--app-disable);
+  border: 1px solid #ced4da;
+  border-left: 0px;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.btn-invalid {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+.btn-valid {
+  color: #28a745;
+  border-color: #28a745;
+}
+.btn-emoji:hover {
+  color: var(--app-active);
+}
+
+@media (min-width: 992px) {
+  .textArea {
+    border-right: 0px;
+    border-radius: 0.25rem;
+  }
+}

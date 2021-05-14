@@ -1,0 +1,18 @@
+
+<div *ngIf="songsInner" id="table-scroll" class="container p-3">
+  <div class="row gy-4">
+    <div
+      *ngFor="let song of songsInner"
+      class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex d-sm-block justify-content-center"
+      (click)="onSongChosen(song)"
+    >
+      <div
+        class="d-inline-flex flex-column justify-content-center px-2 playlist-item text-center"
+        [ngClass]="{ chosen: song.songId === currentSong.songId }"
+      >
+        <img src="{{ song.imgSource }}" class="rounded" />
+        <h5 class="pt-1">{{ song.name }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

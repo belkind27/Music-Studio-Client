@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="text-center">
+    <h1>{{ title }}</h1>
+  </div>
+  <ul class="list-group" [ngSwitch]="model">
+    <ng-container *ngFor="let item of data">
+      <li
+        class="list-group-item d-flex justify-content-between"
+        *ngSwitchCase="1"
+      >
+        <span>{{ item.author }}</span>
+        <span>{{ item.content }}</span>
+        <button class="btn btn-danger" (click)="delete(item.commentId)">
+          Delete
+        </button>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between"
+        *ngSwitchCase="2"
+      >
+        <span>{{ item.name }}</span>
+        <button
+          class="btn btn-danger"
+          *ngIf="action === 2"
+          (click)="delete(item.songId)"
+        >
+          Delete
+        </button>
+        <button
+          class="btn btn-warning"
+          *ngIf="action === 3"
+          (click)="update(item)"
+        >
+          Update
+        </button>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between"
+        *ngSwitchCase="3"
+      >
+        <span>{{ item.title }}</span>
+        <button
+          class="btn btn-danger"
+          *ngIf="action === 2"
+          (click)="delete(item.noteId)"
+        >
+          Delete
+        </button>
+        <button
+          class="btn btn-warning"
+          *ngIf="action === 3"
+          (click)="update(item)"
+        >
+          Update
+        </button>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between"
+        *ngSwitchCase="4"
+      >
+        <span>{{ item.title }}</span>
+        <button class="btn btn-warning" (click)="update(item)">Update</button>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between"
+        *ngSwitchCase="5"
+      >
+        <span>{{ item.name }}</span>
+        <button
+          class="btn btn-danger"
+          *ngIf="action === 2"
+          (click)="delete(item.spotlightId)"
+        >
+          Delete
+        </button>
+        <button
+          class="btn btn-warning"
+          *ngIf="action === 3"
+          (click)="update(item)"
+        >
+          Update
+        </button>
+      </li>
+    </ng-container>
+  </ul>
+</div>

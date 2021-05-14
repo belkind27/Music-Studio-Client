@@ -1,24 +1,31 @@
 {
-  "name": "amits-limon",
+  "name": "Music-Studio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "server:start": "json-server --watch ./server/db.json"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.5",
+    "@angular/cdk": "^11.0.4",
     "@angular/common": "~11.0.5",
     "@angular/compiler": "~11.0.5",
     "@angular/core": "~11.0.5",
     "@angular/forms": "~11.0.5",
+    "@angular/material": "^11.0.4",
     "@angular/platform-browser": "~11.0.5",
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
+    "@angular/youtube-player": "^11.1.2",
+    "@ctrl/ngx-emoji-mart": "^4.1.0",
+    "ngx-device-detector": "^2.0.7",
+    "ngx-drag-scroll": "^9.0.0-beta.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

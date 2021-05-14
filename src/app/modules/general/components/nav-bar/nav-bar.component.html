@@ -1,0 +1,86 @@
+<nav
+  class="navbar sticky-top navbar-expand-lg"
+  [ngClass]="{
+    'navbar-light': isDark,
+    'navbar-dark': !isDark,
+    'bg-transparent': !isOpen,
+    'bg-dark': isOpen && !isDark,
+    'bg-light': isOpen && isDark
+  }"
+>
+  <div class="container-fluid">
+    <a class="link-dark navbar-brand" href="#">Music-Studio</a>
+    <button
+      (click)="openMenu()"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item p-1">
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="{{ facebookLink }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+            <h5 class="d-lg-none">Facebook</h5>
+          </a>
+        </li>
+        <li class="nav-item p-1">
+          <a
+            class="nav-link"
+            href="{{ instagramLink }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+            <h5 class="d-lg-none">Instagram</h5>
+          </a>
+        </li>
+        <li class="nav-item p-1">
+          <a
+            class="nav-link"
+            href="{{ emailLink }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            <h5 class="d-lg-none">Mail</h5>
+          </a>
+        </li>
+        <li class="nav-item p-1">
+          <a
+            class="nav-link"
+            href="{{ spotifyLink }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-spotify fa-2x" aria-hidden="true"></i>
+            <h5 class="d-lg-none">Spotify</h5>
+          </a>
+        </li>
+        <li class="nav-item p-1">
+          <a
+            class="nav-link"
+            href="{{ whatsAppLink }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-whatsapp fa-2x"></i>
+            <h5 class="d-lg-none">Whatsapp</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

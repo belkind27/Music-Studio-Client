@@ -1,0 +1,87 @@
+canvas {
+  width: 90%;
+  height: 40px;
+}
+#canvas {
+  position: absolute;
+}
+#spinner {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  bottom: 70px;
+}
+.canvas-filler {
+  height: 50px;
+}
+.audio-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--app-light);
+  border-top: 1px solid var(--app-sub-active);
+}
+audio {
+  height: 30px;
+  width: 100%;
+  color: transparent;
+}
+.btns {
+  color: var(--app-dark);
+}
+.btns:hover {
+  color: var(--app-active);
+}
+.selected {
+  color: var(--app-active);
+}
+#replay {
+  display: none;
+}
+#replay-min {
+  display: none;
+}
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker {
+  display: inline-block;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+}
+.wrap {
+  overflow: hidden;
+  box-sizing: content-box;
+  white-space: nowrap;
+}

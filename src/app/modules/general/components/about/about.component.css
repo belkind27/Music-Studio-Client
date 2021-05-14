@@ -1,0 +1,11 @@
+p {
+  width: 50%;
+}
+@media (max-width: 576px) {
+  p {
+    width: 100%;
+  }
+}
+#about-container{
+  min-height: 100vh;
+}

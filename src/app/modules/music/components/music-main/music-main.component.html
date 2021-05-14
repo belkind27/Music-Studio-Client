@@ -1,0 +1,11 @@
+<div class="card">
+  <app-title [titleContent]="title" [titleColor]="titleColor"></app-title>
+  <div class="d-flex justify-content-center">
+    <h1 class="text-secondary p-5">Projects</h1>
+  </div>
+  <app-spotlight-section> </app-spotlight-section>
+  <app-music-player-container
+    [currentSong]="currentSong"
+  ></app-music-player-container>
+  <app-playlist [songs]="songs" [(currentSong)]="currentSong"></app-playlist>
+</div>

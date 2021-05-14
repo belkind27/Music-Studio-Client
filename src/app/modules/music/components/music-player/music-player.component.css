@@ -1,0 +1,37 @@
+#musicPlayerWrapper {
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+#btn-play {
+  color: var(--app-dark);
+  z-index: 10;
+  position: absolute;
+  left: 39%;
+  top: 31%;
+}
+#btn-play:hover {
+  color: var(--app-active);
+}
+#btn-play:disabled {
+  color: var(--app-disable);
+}
+#duration {
+  padding-right: 8rem;
+}
+#divider {
+  height: 15vh;
+}
+@media (max-width: 758px) {
+  #btn-play {
+    left: 45%;
+    top: 40%;
+  }
+}
+@media (max-width: 680px) {
+  #btn-play {
+    top: 45%;
+  }
+}

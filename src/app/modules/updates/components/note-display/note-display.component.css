@@ -1,0 +1,14 @@
+.note-container {
+  text-align: center;
+  color: var(--app-dark);
+  height: inherit;
+  max-width: 80vw;
+  width: 30rem;
+  height: 80vh;
+  padding: 1rem;
+}
+.note-container p {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

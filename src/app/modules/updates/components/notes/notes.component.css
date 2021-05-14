@@ -1,0 +1,40 @@
+#control-right-notes {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  background-color: transparent;
+  border: 0px;
+}
+#control-left-notes {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  background-color: transparent;
+  border: 0px;
+}
+#control-left-notes:hover,
+#control-right-notes:hover {
+  color: var(--app-active);
+}
+
+drag-scroll {
+  height: 15rem;
+  width: 100%;
+}
+.note {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25em;
+  border: black solid 0.125em;
+  background-color: rgb(224, 223, 223, 0.3);
+}
+.note:hover {
+  background-color: var(--app-sub-active);
+}
+.note p {
+  width: 100%;
+  max-width: 60vw;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

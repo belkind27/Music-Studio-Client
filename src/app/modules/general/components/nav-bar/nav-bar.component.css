@@ -1,0 +1,23 @@
+.nav-link:hover .fa-facebook-square {
+  color: var(--facebook);
+}
+.nav-link:hover .fa-instagram {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--instagram);
+}
+.nav-link:hover .fa-spotify {
+  color: var(--spotify);
+  bottom: -1vh;
+}
+.nav-link:hover .fa-envelope {
+  position: relative;
+  color: #fcaf45;
+}
+.nav-link:hover .fa-whatsapp {
+  color: #4ac959;
+}
+.navbar-brand {
+  font-family: "Roboto Slab", serif;
+}

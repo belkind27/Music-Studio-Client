@@ -1,0 +1,41 @@
+<div
+  class="container-fluid d-flex justify-content-center p-5 position-relative"
+>
+  <youtube-player
+    [videoId]="currentSpotlight?.youtube"
+    [playerVars]="{ rel: 0 }"
+    [width]="w"
+    [height]="h"
+  ></youtube-player>
+  <app-spotlight-vertical-bar
+    [currentSpotlight]="currentSpotlight"
+  ></app-spotlight-vertical-bar>
+</div>
+<app-spotlight-horizontal-bar
+  [currentSpotlight]="currentSpotlight"
+></app-spotlight-horizontal-bar>
+<div class="container-fluid p-5 position-relative">
+  <drag-scroll [scroll-x-wheel-enabled]="true" [scrollbar-hidden]="true" #nav>
+    <div
+      *ngFor="let spotlight of spotlights"
+      class="item text-center"
+      drag-scroll-item
+      [ngStyle]="{ 'padding-right.px': imgP,'padding-left.px': imgP }"
+      (click)="onClick(spotlight)"
+    >
+      <img
+        src="https://img.youtube.com/vi/{{ spotlight.youtube }}/sddefault.jpg"
+        alt="{{ spotlight.name }}"
+        [ngStyle]="{ 'width.px': imgW }"
+      />
+      <i class="fa fa-play fa-2x"></i>
+      <h5>{{ spotlight.name }}</h5>
+    </div>
+  </drag-scroll>
+  <button id="control-left-spotlights" (click)="moveLeft()">
+    <i class="fas fa-chevron-left fa-4x"></i>
+  </button>
+  <button id="control-right-spotlights" (click)="moveRight()">
+    <i class="fas fa-chevron-right fa-4x"></i>
+  </button>
+</div>

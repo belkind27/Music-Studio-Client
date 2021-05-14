@@ -1,0 +1,21 @@
+<div class="container p-3">
+  <h3 *ngIf="comments && comments.length > 0" class="muted">Comments</h3>
+  <div *ngIf="comments && comments.length > 0" id="table-scroll">
+    <table class="table">
+      <tr *ngFor="let comment of comments">
+        <td>
+          <span class="font-weight-bold p-1">{{ comment.author }}</span>
+          <span>Says: {{ comment.content }}</span>
+        </td>
+        <td>
+          <span class="text-muted p-1">{{ comment.date | date }}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="comments?.length === 0" class="d-flex justify-content-center">
+    <span class="border border-danger rounded-pill p-2 text-danger">
+      No Comments Yet
+    </span>
+  </div>
+</div>

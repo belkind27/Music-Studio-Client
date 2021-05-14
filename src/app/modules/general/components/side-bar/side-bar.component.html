@@ -1,0 +1,30 @@
+<div [@openCloseMenu]="isShown ? 'open' : 'closed'" id="navSide">
+  <nav
+    class="nav flex-column bg-light border border-secondary rounded shadow-lg"
+  >
+    <a class="nav-link link-dark p-3 text-center" href="#AboutMe">About Me </a>
+    <a class="nav-link link-dark p-3 text-center" href="#AboutStudio"
+      >About Studio</a
+    >
+    <a
+      *ngIf="isServerLoad"
+      class="nav-link link-dark p-3 text-center"
+      href="#Music"
+      >Music</a
+    >
+    <a
+      *ngIf="isServerLoad"
+      class="nav-link link-dark p-3 text-center"
+      href="#Updates"
+      >What Im Doing Now?</a
+    >
+  </nav>
+</div>
+<div [@openCloseBtn]="isShown ? 'open' : 'closed'" id="btn">
+  <a class="btn-costume rounded p-3 shadow-lg" (click)="btnClick()">
+    <i
+      class="fas fa-2x align-middle"
+      [ngClass]="{ 'fa-chevron-right': !isShown, 'fa-chevron-left': isShown }"
+    ></i>
+  </a>
+</div>

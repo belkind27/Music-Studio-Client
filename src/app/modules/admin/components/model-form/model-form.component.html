@@ -1,0 +1,22 @@
+<app-song-form
+  *ngIf="model === 2"
+  (submitEmitter)="onSubmit($event)"
+  [data]="data"
+>
+</app-song-form>
+<app-note-form
+  *ngIf="model === 3"
+  (submitEmitter)="onSubmit($event)"
+  [data]="data"
+></app-note-form>
+<app-recommendetion-form
+  *ngIf="model === 4"
+  (submitEmitter)="onSubmit($event)"
+  [data]="data"
+></app-recommendetion-form>
+<app-spotlight-form
+  *ngIf="model === 5"
+  (submitEmitter)="onSubmit($event)"
+  [data]="data"
+>
+</app-spotlight-form>

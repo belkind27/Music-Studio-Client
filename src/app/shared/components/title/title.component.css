@@ -1,0 +1,10 @@
+h1 {
+  word-wrap: break-word;
+  font-family: "Roboto Slab", serif;
+}
+.dark {
+  color: var(--app-dark);
+}
+.light {
+  color: var(--app-light);
+}

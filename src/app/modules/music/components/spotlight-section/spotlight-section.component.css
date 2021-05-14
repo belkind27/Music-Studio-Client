@@ -1,0 +1,61 @@
+.fa-play {
+  color: var(--app-dark);
+  z-index: 100;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  cursor: pointer;
+}
+.item:hover .fa-play,
+.item:hover h5 {
+  color: var(--app-active);
+  cursor: pointer;
+}
+.item {
+  position: relative;
+}
+img {
+  cursor: pointer;
+  height: 25vh;
+  border-radius: 0.25rem;
+}
+
+h5 {
+  font-family: "Roboto Slab", serif;
+  color: #222427;
+}
+drag-scroll {
+  height: calc(3rem + 15vw);
+}
+@media (max-width: 992px) {
+  drag-scroll {
+    height: calc(3rem + 20vw + 60px);
+  }
+}
+#control-right-spotlights {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  background-color: transparent;
+  border: 0px;
+}
+#control-left-spotlights {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  background-color: transparent;
+  border: 0px;
+}
+#control-left-spotlights:hover,
+#control-right-spotlights:hover {
+  color: var(--app-active);
+}
+@media (max-width: 576px) {
+  drag-scroll {
+    height: calc(3rem + 20vw + 80px);
+  }
+  .fa-play {
+    left: 40%;
+    top: 35%;
+  }
+}

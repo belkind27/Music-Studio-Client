@@ -1,0 +1,5 @@
+<div class="place-holder d-none d-lg-flex justify-content-center">
+  <ng-container *ngFor="let comment of innerCurrentComments">
+    <app-popup [comment]="comment" [isAlive]="isShown"></app-popup>
+  </ng-container>
+</div>

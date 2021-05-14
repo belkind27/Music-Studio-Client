@@ -1,0 +1,40 @@
+.fa-spotify:hover {
+  color: var(--spotify);
+}
+.fa-youtube:hover {
+  color: #ff0000;
+}
+.fa-amazon:hover {
+  color: #ff9900;
+}
+.fa-apple:hover {
+  color: #000000;
+}
+.fa-itunes:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(45deg, #ea4cc0, #d948dd, #cc45f2);
+}
+.fa-deezer:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #fcaf45,
+    #f77737,
+    #c13584,
+    #833ab4,
+    #405de6,
+    #c2ff00
+  );
+}
+#tidal-icon {
+  width: 3em;
+  height: 3em;
+}
+#tidal-icon-sm {
+  width: 2em;
+  height: 2em;
+}

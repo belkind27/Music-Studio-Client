@@ -1,0 +1,6 @@
+#table-scroll {
+  height: calc(9rem + 12px);
+  overflow: auto;
+  width: 100%;
+}
+

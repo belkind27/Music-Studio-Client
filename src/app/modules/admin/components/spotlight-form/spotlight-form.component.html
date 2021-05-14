@@ -1,0 +1,125 @@
+<form #form="ngForm" class="container" (ngSubmit)="submit()">
+  <div class="row">
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="name"
+      [(ngModel)]="model.name"
+      #name="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': name.touched && name.invalid,
+        'is-valid': name.valid
+      }"
+      name="title"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="youtube"
+      [(ngModel)]="model.youtube"
+      #youtube="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': youtube.invalid && youtube.touched,
+        'is-valid': youtube.valid
+      }"
+      name="youtube"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="spotify"
+      [(ngModel)]="model.spotify"
+      #spotify="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': spotify.invalid && spotify.touched,
+        'is-valid': spotify.valid
+      }"
+      name="spotify"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="amazon"
+      [(ngModel)]="model.amazone"
+      #amazone="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': amazone.invalid && amazone.touched,
+        'is-valid': amazone.valid
+      }"
+      name="amazone"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="apple"
+      [(ngModel)]="model.apple"
+      #apple="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': apple.invalid && apple.touched,
+        'is-valid': apple.valid
+      }"
+      name="apple"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="itunes"
+      [(ngModel)]="model.itunes"
+      #itunes="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': itunes.invalid && itunes.touched,
+        'is-valid': itunes.valid
+      }"
+      name="itunes"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="tidal"
+      [(ngModel)]="model.tidal"
+      #tidal="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': tidal.invalid && tidal.touched,
+        'is-valid': tidal.valid
+      }"
+      name="tidal"
+    />
+    <input
+      type="text"
+      class="form-control bg-transparent mt-5"
+      placeholder="deezer"
+      [(ngModel)]="model.deezer"
+      #deezer="ngModel"
+      required
+      [maxlength]="100"
+      [ngClass]="{
+        'is-invalid': deezer.invalid && deezer.touched,
+        'is-valid': deezer.valid
+      }"
+      name="deezer"
+    />
+  </div>
+  <div class="d-flex justify-content-center mt-5">
+    <button
+      type="submit"
+      class="btn-costume rounded mb-3"
+      [disabled]="!form.valid"
+    >
+      finish
+    </button>
+  </div>
+</form>

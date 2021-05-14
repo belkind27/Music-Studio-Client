@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+.line-dark {
+  height: 2px;
+  width: 100%;
+  background-color: var(--app-dark);
+}
+.line-light {
+  height: 2px;
+  width: 100%;
+  background-color: var(--app-light);
+}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
+.filler {
+  height: 100vh;
+}
+.btn-costume {
+  padding: 8px;
+  background-color: var(--app-dark);
+  color: var(--app-light);
+}
+.btn-costume:hover {
+  background-color: var(--app-active);
+  color: var(--app-dark);
+}
+.btn-costume:disabled {
+  background-color: var(--app-disable);
+  color: var(--app-light);
+}
+.dialog-note .mat-dialog-container {
+  padding: 0px;
+  background-color: var(--app-light);
+}
+body::-webkit-scrollbar {
+  width: 20px;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--app-sub-active);
+  border-radius: 5px;
+}
+div::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: var(--app-theme);
+  border-radius: 5px;
+}
+:root {
+  --app-light: #fff;
+  --app-dark: #000000;
+  --app-active: #5bbed6;
+  --app-sub-active: #5bbed64d;
+  --app-disable: #b8babd;
+  --facebook: #4267b2;
+  --instagram: linear-gradient(
+    45deg,
+    #ffdc80,
+    #fcaf45,
+    #f77737,
+    #f56040,
+    #e1306c,
+    #c13584,
+    #833ab4,
+    #5851db,
+    #405de6
+  );
+  --spotify: #1db954;
+}

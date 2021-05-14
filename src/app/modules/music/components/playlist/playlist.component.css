@@ -1,0 +1,22 @@
+.chosen h5 {
+  color: var(--app-active);
+}
+#table-scroll {
+  height: calc(50vh + 7rem);
+  overflow: auto;
+}
+.playlist-item:hover h5 {
+  color: var(--app-active);
+  cursor: pointer;
+}
+.playlist-item:hover img {
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: 25vh;
+}
+h5 {
+  font-family: "Roboto Slab", serif;
+  color: var(--app-dark);
+}

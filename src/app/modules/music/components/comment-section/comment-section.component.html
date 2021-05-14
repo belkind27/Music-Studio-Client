@@ -1,0 +1,72 @@
+<form #form="ngForm" class="container-fluid" (ngSubmit)="addComment(form)">
+  <div class="row">
+    <div class="col-lg-2 p-1">
+      <input
+        type="text"
+        class="form-control bg-transparent"
+        placeholder="who am i?"
+        [(ngModel)]="newComment.author"
+        #commentAuthor="ngModel"
+        required
+        [maxlength]="20"
+        [ngClass]="{
+          'is-invalid': commentAuthor.invalid && commentAuthor.touched,
+          'is-valid': commentAuthor.valid
+        }"
+        name="author"
+      />
+    </div>
+    <div class="col-lg-8 p-1">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control bg-transparent textArea"
+          placeholder="write comment"
+          [(ngModel)]="newComment.content"
+          #commentContent="ngModel"
+          required
+          [maxlength]="30"
+          [ngClass]="{
+            'is-invalid': commentContent.invalid && commentContent.touched,
+            'is-valid': commentContent.valid
+          }"
+          name="content"
+        />
+        <button
+          class="btn-emoji d-none d-lg-block position-relative"
+          [ngClass]="{
+            'btn-invalid': commentContent.invalid && commentContent.touched,
+            'btn-valid': commentContent.valid
+          }"
+          type="button"
+          (click)="emojiBtnClick()"
+        >
+          <i class="far fa-smile fa-2x"></i>
+          <div id="emoji-container" class="d-none d-lg-flex">
+            <emoji-mart
+              (emojiClick)="addEmoji($event)"
+              *ngIf="isEmoji"
+              [skin]="1"
+              [style]="{
+                position: 'absolute',
+                bottom: emojiPickerBottom,
+                right: emojiPickerRight
+              }"
+              [showPreview]="false"
+            >
+            </emoji-mart>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="col-2">
+      <button
+        type="submit"
+        class="btn-costume rounded mb-3"
+        [disabled]="!form.valid"
+      >
+        Comment
+      </button>
+    </div>
+  </div>
+</form>

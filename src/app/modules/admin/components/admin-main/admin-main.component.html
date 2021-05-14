@@ -1,0 +1,84 @@
+<app-title [titleContent]="title" [titleColor]="titleColor"></app-title>
+<div class="container">
+  <div class="row">
+    <button
+      class="col btn btn-secondary btn-row"
+      (click)="model = 1; action = 0"
+      [ngClass]="{ 'bg-success': model === 1 }"
+    >
+      Comments
+    </button>
+    <button
+      class="col btn btn-secondary btn-row"
+      (click)="model = 2; action = 0"
+      [ngClass]="{ 'bg-success': model === 2 }"
+    >
+      Songs
+    </button>
+    <button
+      class="col btn btn-secondary btn-row"
+      (click)="model = 3; action = 0"
+      [ngClass]="{ 'bg-success': model === 3 }"
+    >
+      Notes
+    </button>
+    <button
+      class="col btn btn-secondary btn-row"
+      (click)="model = 4; action = 0"
+      [ngClass]="{ 'bg-success': model === 4 }"
+    >
+      Recommendations
+    </button>
+    <button
+      class="col btn btn-secondary btn-row"
+      (click)="model = 5; action = 0"
+      [ngClass]="{ 'bg-success': model === 5 }"
+    >
+      SpotLights
+    </button>
+  </div>
+  <div class="row">
+    <button
+      class="col btn btn-primary btn-row"
+      (click)="action = 1"
+      [disabled]="canCreate()"
+      [ngClass]="{ 'bg-success': action === 1 }"
+    >
+      Create
+    </button>
+    <button
+      class="col btn btn-primary btn-row"
+      (click)="action = 2"
+      [disabled]="canDelete()"
+      [ngClass]="{ 'bg-success': action === 2 }"
+    >
+      Delete
+    </button>
+    <button
+      class="col btn btn-primary btn-row"
+      (click)="action = 3"
+      [disabled]="canUpdate()"
+      [ngClass]="{ 'bg-success': action === 3 }"
+    >
+      Update
+    </button>
+  </div>
+  <div class="d-flex justify-content-end p-2">
+    <button
+      class="btn btn-warning px-4"
+      [disabled]="canStart()"
+      (click)="emitAction()"
+    >
+      Start
+    </button>
+  </div>
+</div>
+<app-data-table
+  [operation]="tableOperation$"
+  (updateEmitter)="onUpdate($event)"
+  [hidden]="isShow"
+></app-data-table>
+<app-model-form
+  [operation]="formOperation$"
+  [hidden]="!isShow"
+></app-model-form>

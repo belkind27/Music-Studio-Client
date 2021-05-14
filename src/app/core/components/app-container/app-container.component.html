@@ -1,0 +1,11 @@
+<app-side-bar [isServerLoad]="isMusic"></app-side-bar>
+<app-nav-bar [isDark]="isDark"></app-nav-bar>
+<app-welcome></app-welcome>
+<div class="nav-color-flag" id="AboutMe"></div>
+<app-about></app-about>
+<div class="nav-color-flag" id="AboutStudio"></div>
+<app-about-studio #studio></app-about-studio>
+<div class="nav-color-flag" id="Music"></div>
+<app-music-main *ngIf="isMusic" (isShow)="isMusicLoad($event)"></app-music-main>
+<div class="nav-color-flag" id="Updates"></div>
+<app-updates-main *ngIf="isMusic"></app-updates-main>

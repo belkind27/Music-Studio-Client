@@ -1,0 +1,16 @@
+#navSide {
+  position: fixed;
+  top: 130px;
+  left: 0;
+  z-index: 100000;
+  width: 150px;
+  font-family: "Roboto Slab", serif;
+}
+#btn {
+  position: fixed;
+  top: 145px;
+  z-index: 100000;
+}
+.nav-link:hover{
+  color: var(--app-sub-active);
+}

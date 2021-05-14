@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container text-center text-white">
+      <h1>What I Currently Listening To</h1>
+    </div>
+  </div>
+  <div class="row ">
+    <div
+      *ngFor="let recommendation of recommendations"
+      class="col-6 col-sm d-flex justify-content-center"
+    >
+      <a
+        href="{{ recommendation.link }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="recommendation font-weight-bold m-1">
+          <i class="fa fa-spotify fa-3x p-2"></i>
+          <div class="align-middle">{{ recommendation.title }}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

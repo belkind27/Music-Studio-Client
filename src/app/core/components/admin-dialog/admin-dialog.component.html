@@ -1,0 +1,24 @@
+<form class="container d-flex flex-column bg-transparent" #form1>
+  <h1 class="p-3">Admin Portal</h1>
+  <input
+    class="form-control bg-transparent text-light"
+    type="text"
+    placeholder="enter name"
+    #name
+  />
+  <input
+    class="form-control bg-transparent mt-4 text-light"
+    type="password"
+    placeholder="enter password"
+    #password
+  />
+  <div class="d-flex justify-content-center p-3">
+    <button
+      class="btn btn-primary"
+      type="submit"
+      (click)="login(name.value, password.value, $event)"
+    >
+      Enter
+    </button>
+  </div>
+</form>

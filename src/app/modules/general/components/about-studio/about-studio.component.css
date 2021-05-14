@@ -1,0 +1,82 @@
+.header-img {
+  height: 40vh;
+}
+.gallery-img {
+  height: 20vh;
+  cursor: pointer;
+}
+.gallery-img:hover {
+  -webkit-filter: brightness(60%);
+  filter: brightness(60%);
+}
+#gallery-modal {
+  position: fixed;
+  z-index: 1000;
+  height: 120vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+}
+#img-modal {
+  position: relative;
+  top: 20%;
+  left: 20%;
+  width: 60vw;
+  height: 60vh;
+}
+#control-left-modal {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  background-color: transparent;
+  border: 0px;
+  color: var(--app-light);
+}
+#control-right-modal {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  background-color: transparent;
+  border: 0px;
+  color: var(--app-light);
+}
+#control-close {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  background-color: transparent;
+  border: 0px;
+  color: var(--app-light);
+}
+#gallery-container {
+  padding: 0em 3em 0em 3em;
+}
+p {
+  width: 50%;
+}
+@media (max-width: 576px) {
+  p {
+    width: 100%;
+  }
+  #img-modal {
+    position: relative;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+  }
+  .gallery-img {
+    height: 40vh;
+    cursor: pointer;
+  }
+  #control-right-modal {
+    top: 40%;
+  }
+  #control-left-modal {
+    top: 40%;
+  }
+  #gallery-container {
+    padding: 0em 0.25em 0em 0.25em;
+  }
+}

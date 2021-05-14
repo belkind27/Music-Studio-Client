@@ -1,0 +1,10 @@
+.recommendation {
+  color: var(--app-dark);
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+.recommendation:hover {
+  color: var(--spotify);
+}
